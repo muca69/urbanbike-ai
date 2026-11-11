@@ -6,6 +6,8 @@
 venv/
 __pycache__/
 *.pyc
+*.pyo
+.pytest_cache/
 
 # Environment variables
 .env
@@ -14,3 +16,6 @@ __pycache__/
 # Machine Learning models
 *.pkl
 *.joblib
+
+# Cursor
+.cursor/rules/
