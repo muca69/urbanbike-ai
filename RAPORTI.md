@@ -24,18 +24,38 @@ Arsyeja e imputimit vetëm me train:
 
 ## Grafikët
 
-Vëzhgimi 1 dhe figura përkatëse:
-Vëzhgimi 2 dhe figura përkatëse:
-Pse një lidhje e dukshme nuk provon shkakësi:
+## Grafikët
+
+**Vëzhgimi 1 dhe figura përkatëse:**
+
+Figura `reports/01_daily_demand.png` paraqet ndryshimin e kërkesës ditore për biçikleta gjatë periudhës së analizuar.
+
+Analiza tregon një tendencë përgjithësisht rritëse të numrit të qirave, por edhe luhatje të konsiderueshme nga një ditë në tjetrën.
+
+Mesatarja ditore është 3,794.21 qira, ndërsa minimumi dhe maksimumi janë përkatësisht 431 dhe 8,362 qira.
+
+**Vëzhgimi 2 dhe figura përkatëse:**
+
+Figura `reports/02_monthly_demand.png` tregon kërkesën mesatare ditore sipas muajve.
+
+Nga grafiku vërehet se kërkesa është më e lartë gjatë muajve të pranverës dhe verës, me kulmin në maj. Në muajt e dimrit, veçanërisht në janar, kërkesa është më e ulët.
+
+Figura `reports/03_temperature_demand.png` tregon një lidhje pozitive midis temperaturës dhe numrit të qirave, megjithëse marrëdhënia nuk është plotësisht lineare.
+
+**Pse një lidhje e dukshme nuk provon shkakësi:**
+
+Një korrelacion midis temperaturës dhe kërkesës për biçikleta nuk do të thotë domosdoshmërisht se temperatura është shkaku i vetëm i ndryshimit të kërkesës.
+
+Faktorë të tjerë, si sezoni, reshjet, ditët e punës, festat dhe sjellja e përdoruesve, mund të ndikojnë gjithashtu.
 
 ## Vlerësimi
 
-| Modeli | Validation MAE | Test MAE | Test RMSE | Test R² |
-|---|---:|---:|---:|---:|
-| Yesterday | | | | |
-| DummyMean | | | | |
-| Ridge | | | | |
-| RandomForest | | | | |
+| Modeli       | Validation MAE | Test MAE | Test RMSE | Test R² |
+| ------------ | -------------: | -------: | --------: | ------: |
+| Yesterday    |                |          |           |         |
+| DummyMean    |                |          |           |         |
+| Ridge        |                |          |           |         |
+| RandomForest |                |          |           |         |
 
 Modeli i zgjedhur nga validation dhe arsyeja:
 Rezultati i provës me Random Forest:
@@ -51,10 +71,10 @@ Rezultati i klasifikimit, nëse u realizua:
 ## Kontributet individuale
 
 | Studenti | Skedari/ekrani | Puna dhe vendimi | Commit/prova |
-|---|---|---|---|
-| | | | |
-| | | | |
-| | | | |
+| -------- | -------------- | ---------------- | ------------ |
+|          |                |                  |              |
+|          |                |                  |              |
+|          |                |                  |              |
 
 ## Burimet
 
