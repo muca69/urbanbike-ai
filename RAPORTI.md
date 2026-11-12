@@ -46,21 +46,12 @@ Analiza eksploruese është realizuar vetëm mbi periudhën train, duke përdoru
 
 ## Vlerësimi
 
-| Modeli | Validation MAE | Test MAE | Test RMSE | Test R² |
-| ------ | -------------: | -------: | --------: | ------: |
-
-<<<<<<< HEAD
-| Yesterday | | | | |
-| DummyMean | | | | |
-| Ridge | | | | |
-| RandomForest | | | | |
-=======
-| Yesterday | 775.203 | 916.402 | 1330.386 | 0.539 |
-| DummyMean | 2953.866 | 2494.628 | 2790.064 | -1.027 |
-| Ridge | 687.558 | 893.251 | 1252.655 | 0.591 |
-| RandomForest | 1821.528 | 1671.499 | 2042.654 | -0.087 |
-
-> > > > > > > main
+| Modeli       | Validation MAE | Test MAE | Test RMSE | Test R² |
+| ------------ | -------------: | -------: | --------: | ------: |
+| Yesterday    |        775.203 |  916.402 |  1330.386 |   0.539 |
+| DummyMean    |       2953.866 | 2494.628 |  2790.064 |  -1.027 |
+| Ridge        |        687.558 |  893.251 |  1252.655 |   0.591 |
+| RandomForest |       1821.528 | 1671.499 |  2042.654 |  -0.087 |
 
 **Modeli i zgjedhur nga validation dhe arsyeja:**
 
@@ -85,17 +76,9 @@ Modeli Ridge ka një MAE prej 893.251 në test. Kjo do të thotë se parashikime
 ## Kontributet individuale
 
 | Studenti | Skedari/ekrani | Puna dhe vendimi | Commit/prova |
-<<<<<<< HEAD
-| -------- | -------------- | ---------------- | ------------ |
 | | | | |
 | | | | |
 | | | | |
-=======
-| | | | |
-| | | | |
-| | | | |
-
-> > > > > > > main
 
 **Dion Guzja — Machine Learning**
 
@@ -103,6 +86,16 @@ Modeli Ridge ka një MAE prej 893.251 në test. Kjo do të thotë se parashikime
 - Kontributet përfshijnë konfigurimin e ndarjes kronologjike Train / Validation / Test, implementimin e modeleve Yesterday, DummyMean, Ridge Regression dhe RandomForest, ndërtimin e Pipeline për përpunimin e të dhënave, trajnimin dhe vlerësimin e modeleve përmes metrikave MAE, RMSE dhe R².
 - Gjithashtu, realizoi përzgjedhjen e modelit përfundimtar bazuar në rezultatet e validimit, gjenerimin e parashikimeve për periudhën e testimit, krijimin e grafikut krahasues dhe ruajtjen e rezultateve për integrimin në aplikacion.
 - Skedarët kryesorë: `config/common.py`, `scripts/03_train.py`, `reports/regression_metrics.csv`, `reports/results_summary.json`, `reports/test_predictions.csv` dhe `reports/figures/04_predictions.png`.
+
+**Erastus Bakalli — EDA & Visualization**
+
+- Përgjegjës për analizën eksploruese të të dhënave dhe vizualizimin e rezultateve në projektin UrbanBike AI.
+- Realizova analizën statistikore të 479 ditëve të trajnimit, duke llogaritur mesataren, minimumin, maksimumin, devijimin standard dhe korrelacionin ndërmjet temperaturës dhe kërkesës.
+- Krijova tre grafikë për kërkesën ditore, kërkesën mesatare mujore dhe marrëdhënien temperaturë–kërkesë.
+- Harmonizova periudhën e analizës me ndarjen train të modelit Machine Learning, nga 08.01.2011 deri më 30.04.2012.
+- Skedarët kryesorë: `scripts/02_visualize.py`, `reports/01_daily_demand.png`, `reports/02_monthly_demand.png` dhe `reports/03_temperature_demand.png`.
+
+**Commit/prova:** `b98f776` — Align EDA with final ML training period.
 
 ## Burimet
 
