@@ -9,13 +9,21 @@ DATA = ROOT / "data" / "processed" / "cleaned_daily.csv"
 REPORTS = ROOT / "reports"
 REPORTS.mkdir(exist_ok=True)
 
-# Leximi i datasetit
-df = pd.read_csv(DATA, parse_dates=["date"])
+# Leximi i datasetit të përdorur nga modeli ML
+df = pd.read_csv(
+    ROOT / "data/processed/model_data.csv",
+    parse_dates=["date"]
+)
+
 df = df.sort_values("date").reset_index(drop=True)
 
-# Përdorim vetëm 70% të parë për analizë eksploruese.
-# Kjo është ndarje provizore; duhet përputhur me train-in e grupit.
-train = df.iloc[:int(len(df) * 0.70)].copy()
+# E njëjta periudhë train si modeli i grupit
+train = df.loc[df["date"] <= "2012-04-30"].copy()
+
+assert len(train) == 479
+
+print("Periudha:", train["date"].min(), train["date"].max())
+print("Korrelacioni:", train["temp_c"].corr(train["rentals"]))
 
 # Statistikat
 print("\n===== URBANBIKE AI - EDA =====")
